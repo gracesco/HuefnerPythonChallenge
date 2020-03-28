@@ -41,6 +41,7 @@ with open ("budget_data.csv") as data:
 # Define the Monthly Average Change 
 monthly_average_change = round(sum(changes)/len(changes))
 
+# Print out the analysis in terminal
 analysis = f"""
 Financial Analysis
 __________________
@@ -52,6 +53,7 @@ Greatest Decrease: {greatest_decrease_month}, ${greatest_decrease}
 """
 print(analysis)
 
+# Save to a txt file
 save_final = input("Do you want to save the final results? (y/n)\n ")
 if save_final =="y":
     with open ("output_file.txt","w") as doc:
